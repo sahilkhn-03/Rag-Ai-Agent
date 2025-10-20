@@ -27,20 +27,18 @@ An advanced **Retrieval-Augmented Generation (RAG)** AI system that transforms e
 
 ### 2. **Semantic Embedding Generation**
 - Transforms text chunks into dense vector representations
-- Uses `all-MiniLM-L6-v2` for lightweight, efficient embeddings
-- Stores embeddings in optimized `joblib` format for fast retrieval
+- Uses lightweight transformer models for efficient embeddings
+- Stores embeddings in optimized format for fast retrieval
 
 ### 3. **Retrieval-Augmented Generation (RAG)**
-- Implements cosine similarity for semantic search
-- Retrieves top-5 most relevant content chunks
+- Implements similarity search for semantic content matching
+- Retrieves most relevant content chunks based on user queries
 - Combines retrieved context with LLM for informed responses
 
 ### 4. **Machine Learning Architecture**
-```python
-# Core similarity search implementation
-similarities = cosine_similarity(np.vstack(df['embedding']), [question_embedding]).flatten()
-top_results = similarities.argsort()[::-1][0:5]
-```
+- Vector similarity algorithms for content matching
+- Optimized search algorithms for fast retrieval
+- Integration with large language models for natural responses
 
 ## 🛠️ Technology Stack
 
@@ -109,33 +107,13 @@ npm run dev
 ## 🔬 ML Pipeline Deep Dive
 
 ### Embedding Generation
-The system uses sentence-transformers to create semantic embeddings:
-```python
-from sentence_transformers import SentenceTransformer
-model = SentenceTransformer('all-MiniLM-L6-v2')
-embeddings = model.encode(text_chunks, convert_to_numpy=True)
-```
+The system uses transformer models to create semantic embeddings that capture the meaning of text chunks for efficient similarity search.
 
 ### Similarity Search
-Cosine similarity finds the most relevant content:
-```python
-from sklearn.metrics.pairwise import cosine_similarity
-similarities = cosine_similarity(stored_embeddings, query_embedding)
-top_indices = similarities.argsort()[::-1][:5]
-```
+Advanced algorithms find the most relevant content by comparing vector representations of user queries with stored content embeddings.
 
 ### Prompt Engineering
-Advanced prompt engineering optimizes LLM responses:
-```python
-prompt = f"""
-You are a helpful web development teaching assistant. Use ONLY the Course Content section below to answer the student's question.
-
-Course Content:
-{context}
-
-Student Question: {question}
-"""
-```
+Sophisticated prompt engineering optimizes large language model responses to provide accurate, context-aware answers.
 
 ## 🎨 Frontend Features
 
@@ -154,35 +132,16 @@ Student Question: {question}
 ## 🌐 API Endpoints
 
 ### POST `/ask`
-```json
-{
-  "question": "How do websites work?"
-}
-```
-
-Response:
-```json
-{
-  "response": "Detailed AI-generated answer...",
-  "semantic_answer": "Concise semantic summary",
-  "evidence": [
-    {
-      "title": "Video Title",
-      "timestamp": "2:30",
-      "score": 0.85
-    }
-  ]
-}
-```
+Sends a question to the AI assistant and receives a contextual response with relevant video references.
 
 ### GET `/health`
-System status check endpoint
+System status check endpoint for monitoring deployment health.
 
 ## 📈 Performance Metrics
 
 - **Response Time**: < 2 seconds for most queries
-- **Accuracy**: 92% relevance in top-3 results
-- **Scalability**: Handles 1000+ video hours efficiently
+- **Accuracy**: High relevance in top results
+- **Scalability**: Handles large video libraries efficiently
 - **Model Efficiency**: Lightweight embeddings for fast inference
 
 ## 🎯 Use Cases
@@ -212,15 +171,7 @@ RagBasedAi/
 ## 🔧 Deployment
 
 ### Backend (Google Cloud Run)
-```dockerfile
-FROM python:3.11-slim
-WORKDIR /app
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
-COPY . .
-EXPOSE 8080
-CMD ["python", "app.py"]
-```
+Containerized deployment with optimized resource allocation for cost-effective scaling.
 
 ### Frontend (Vercel)
 - Automatic deployments from GitHub
