@@ -1,11 +1,6 @@
 # 🚀 RAG AI Agent - Intelligent Course Assistant
 
 [![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen)](https://rag-ai-frontend-demo.vercel.app/)
-[![Python](https://img.shields.io/badge/Python-3.8%2B-blue)](https://www.python.org/)
-[![Flask](https://img.shields.io/badge/Flask-API-blue)](https://flask.palletsprojects.com/)
-[![React](https://img.shields.io/badge/React-Frontend-blue)](https://reactjs.org/)
-[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-
 An advanced **Retrieval-Augmented Generation (RAG)** AI system that transforms educational content into an interactive learning experience. This intelligent teaching assistant leverages state-of-the-art machine learning techniques to provide precise, context-aware answers with direct video references.
 
 🔗 **Live Demo**: [https://rag-ai-frontend-demo.vercel.app/](https://rag-ai-frontend-demo.vercel.app/)
