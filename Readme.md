@@ -1,11 +1,6 @@
 # 🚀 RAG AI Agent - Intelligent Course Assistant
 
 [![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen)](https://rag-ai-frontend-demo.vercel.app/)
-[![Python](https://img.shields.io/badge/Python-3.8%2B-blue)](https://www.python.org/)
-[![Flask](https://img.shields.io/badge/Flask-API-blue)](https://flask.palletsprojects.com/)
-[![React](https://img.shields.io/badge/React-Frontend-blue)](https://reactjs.org/)
-[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-
 An advanced **Retrieval-Augmented Generation (RAG)** AI system that transforms educational content into an interactive learning experience. This intelligent teaching assistant leverages state-of-the-art machine learning techniques to provide precise, context-aware answers with direct video references.
 
 🔗 **Live Demo**: [https://rag-ai-frontend-demo.vercel.app/](https://rag-ai-frontend-demo.vercel.app/)
@@ -76,32 +71,6 @@ graph TB
     J --> K[Llama 3.1 Generation]
     K --> L[Formatted Response]
     L --> M[Frontend Display]
-```
-
-## 🚀 Quick Start
-
-### Backend Setup
-```bash
-# Install dependencies
-pip install -r requirements.txt
-
-# Set environment variables
-export GROQ_API_KEY=your_api_key_here
-
-# Start the server
-python app.py
-```
-
-### Frontend Setup
-```bash
-# Navigate to frontend directory
-cd frontend
-
-# Install dependencies
-npm install
-
-# Start development server
-npm run dev
 ```
 
 ## 🔬 ML Pipeline Deep Dive
@@ -178,13 +147,6 @@ Containerized deployment with optimized resource allocation for cost-effective s
 - Environment variables for API configuration
 - Optimized static asset delivery
 
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Commit your changes
-4. Push to the branch
-5. Open a pull request
 
 ## 📄 License
 
@@ -192,7 +154,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 👨‍💻 Author
 
-**Sahil Khan** - *AI/ML Engineer & Full Stack Developer*
+**Sahil** - *AI/ML Engineer & Data Science Enthusiast*
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue)](https://linkedin.com/in/sahilkhan)
 [![GitHub](https://img.shields.io/badge/GitHub-Follow-blue)](https://github.com/sahilkhn-03)
