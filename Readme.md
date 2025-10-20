@@ -73,32 +73,6 @@ graph TB
     L --> M[Frontend Display]
 ```
 
-## 🚀 Quick Start
-
-### Backend Setup
-```bash
-# Install dependencies
-pip install -r requirements.txt
-
-# Set environment variables
-export GROQ_API_KEY=your_api_key_here
-
-# Start the server
-python app.py
-```
-
-### Frontend Setup
-```bash
-# Navigate to frontend directory
-cd frontend
-
-# Install dependencies
-npm install
-
-# Start development server
-npm run dev
-```
-
 ## 🔬 ML Pipeline Deep Dive
 
 ### Embedding Generation
@@ -173,13 +147,6 @@ Containerized deployment with optimized resource allocation for cost-effective s
 - Environment variables for API configuration
 - Optimized static asset delivery
 
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Commit your changes
-4. Push to the branch
-5. Open a pull request
 
 ## 📄 License
 
