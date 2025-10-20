@@ -1,0 +1,12 @@
+{
+  "name": "ragbasedai",
+  "version": "1.0.0",
+  "description": "An intelligent AI-powered teaching assistant for the Sigma Web Development Course, featuring a premium landing page and RAG (Retrieval-Augmented Generation) system.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,25 @@
+# Ignore frontend build and node modules
+frontend/
+node_modules/
+
+# Ignore local config and git
+.git/
+.gitignore
+
+# Ignore media and large files we don't need in the container
+videos/
+audios/
+*.mp4
+*.webm
+*.mp3
+*.wav
+
+# Ignore docs and dev artifacts
+*.md
+docs/
+*.log
+response.txt
+prompt.txt
+
+# Keep embeddings.joblib in the build context (do not ignore it)
+# mapper.joblib removed on purpose

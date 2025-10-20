@@ -1,0 +1,128 @@
+{
+  "faqs": [
+    {
+      "question": "How do websites work?",
+      "answer": "Websites work through a client-server model. This topic is covered in **Video 1: Installing VS Code & How Websites Work** starting at **0:00**. The video explains how browsers request web pages from servers, how HTML structures content, and the basic architecture of the web.",
+      "videoNumber": "1",
+      "videoTitle": "Installing VS Code & How Websites Work",
+      "timestamp": "0:00"
+    },
+    {
+      "question": "Where is CSS taught?",
+      "answer": "CSS is introduced in **Video 14: Introduction to CSS** at **0:00**. The course then covers CSS in depth with **Video 15: Inline, Internal & External CSS** at **0:00**, and **Video 17: CSS Selectors MasterClass** at **0:00**. You'll learn about styling, selectors, and the box model.",
+      "videoNumber": "14-17",
+      "videoTitle": "Introduction to CSS, CSS Types, CSS Selectors",
+      "timestamp": "0:00"
+    },
+    {
+      "question": "What are HTML entities?",
+      "answer": "HTML entities are covered in **Video 13: Entities, Code tag and more on HTML** starting at **0:00**. This video explains how to use special characters like &lt;, &gt;, and &amp; in your HTML code without breaking the structure.",
+      "videoNumber": "13",
+      "videoTitle": "Entities, Code tag and more on HTML",
+      "timestamp": "0:00"
+    },
+    {
+      "question": "How to create forms in HTML?",
+      "answer": "HTML forms are taught in **Video 7: Forms and input tags in HTML** at **0:00**. You'll learn about form elements, input types, buttons, and how to collect user data.",
+      "videoNumber": "7",
+      "videoTitle": "Forms and input tags in HTML",
+      "timestamp": "0:00"
+    },
+    {
+      "question": "What is the HTML box model?",
+      "answer": "The CSS Box Model is explained in **Video 18: CSS Box Model - Margin, Padding & Borders** at **0:00**. This video covers how elements are sized and spaced using margin, padding, and borders.",
+      "videoNumber": "18",
+      "videoTitle": "CSS Box Model - Margin, Padding & Borders",
+      "timestamp": "0:00"
+    },
+    {
+      "question": "How to add images in HTML?",
+      "answer": "Adding images is covered in **Video 5: Image, Lists, and Tables in HTML** at **0:00**. You'll learn how to use the &lt;img&gt; tag with proper attributes like src and alt.",
+      "videoNumber": "5",
+      "videoTitle": "Image, Lists, and Tables in HTML",
+      "timestamp": "0:00"
+    },
+    {
+      "question": "What are semantic tags?",
+      "answer": "Semantic HTML tags are explained in **Video 11: Semantic Tags in HTML** at **0:00**. This covers tags like &lt;header&gt;, &lt;nav&gt;, &lt;article&gt;, &lt;section&gt;, and &lt;footer&gt; that give meaning to your HTML structure.",
+      "videoNumber": "11",
+      "videoTitle": "Semantic Tags in HTML",
+      "timestamp": "0:00"
+    },
+    {
+      "question": "How to use CSS selectors?",
+      "answer": "CSS selectors are covered comprehensively in **Video 17: CSS Selectors MasterClass** at **0:00**. This video teaches you how to target specific HTML elements using class selectors, ID selectors, attribute selectors, and more.",
+      "videoNumber": "17",
+      "videoTitle": "CSS Selectors MasterClass",
+      "timestamp": "0:00"
+    },
+    {
+      "question": "What is SEO in HTML?",
+      "answer": "SEO and Core Web Vitals are covered in **Video 6: SEO and Core Web Vitals in HTML** at **0:00**. You'll learn about meta tags, proper HTML structure for search engines, and performance optimization.",
+      "videoNumber": "6",
+      "videoTitle": "SEO and Core Web Vitals in HTML",
+      "timestamp": "0:00"
+    },
+    {
+      "question": "What are inline and block elements?",
+      "answer": "Inline and block elements are explained in **Video 8: Inline & Block Elements in HTML** at **0:00**. This video covers the difference between elements that flow inline with text versus elements that create new blocks.",
+      "videoNumber": "8",
+      "videoTitle": "Inline & Block Elements in HTML",
+      "timestamp": "0:00"
+    },
+    {
+      "question": "How to create your first HTML website?",
+      "answer": "Creating your first HTML website is covered in **Video 2: Your First HTML Website** at **0:00**. This video walks you through creating a complete HTML page from scratch.",
+      "videoNumber": "2",
+      "videoTitle": "Your First HTML Website",
+      "timestamp": "0:00"
+    },
+    {
+      "question": "What is the basic structure of HTML?",
+      "answer": "The basic HTML structure is taught in **Video 3: Basic Structure of an HTML Website** at **0:00**. You'll learn about &lt;html&gt;, &lt;head&gt;, &lt;body&gt;, and other essential tags.",
+      "videoNumber": "3",
+      "videoTitle": "Basic Structure of an HTML Website",
+      "timestamp": "0:00"
+    },
+    {
+      "question": "How to use headings and paragraphs?",
+      "answer": "Headings, paragraphs, and links are covered in **Video 4: Heading, Paragraphs and Links** at **0:00**. This video explains how to structure content with h1-h6 tags, p tags, and create hyperlinks.",
+      "videoNumber": "4",
+      "videoTitle": "Heading, Paragraphs and Links",
+      "timestamp": "0:00"
+    },
+    {
+      "question": "What are IDs and classes in HTML?",
+      "answer": "IDs and Classes are explained in **Video 9: Id & Classes in HTML** at **0:00**. You'll learn how to use these attributes to identify and style specific elements.",
+      "videoNumber": "9",
+      "videoTitle": "Id & Classes in HTML",
+      "timestamp": "0:00"
+    },
+    {
+      "question": "How to add video and audio?",
+      "answer": "Adding video and audio is taught in **Video 10: Video, Audio & Media in HTML** at **0:00**. This covers the &lt;video&gt; and &lt;audio&gt; tags with all their attributes.",
+      "videoNumber": "10",
+      "videoTitle": "Video, Audio & Media in HTML",
+      "timestamp": "0:00"
+    }
+  ],
+  "topics": [
+    "Installing VS Code & How Websites Work",
+    "Your First HTML Website",
+    "Basic Structure of an HTML Website",
+    "Heading, Paragraphs and Links",
+    "Image, Lists, and Tables in HTML",
+    "SEO and Core Web Vitals",
+    "Forms and Input Tags",
+    "Inline & Block Elements",
+    "Id & Classes in HTML",
+    "Video, Audio & Media",
+    "Semantic Tags in HTML",
+    "HTML Entities & Code Tag",
+    "Introduction to CSS",
+    "Inline, Internal & External CSS",
+    "CSS Selectors",
+    "CSS Box Model",
+    "Margin, Padding & Borders"
+  ]
+}

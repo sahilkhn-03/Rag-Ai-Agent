@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAG System Test</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            max-width: 800px; 
+            margin: 0 auto; 
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        .container { 
+            background: rgba(255,255,255,0.1);
+            padding: 30px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+        input, button { 
+            padding: 12px; 
+            margin: 10px 0;
+            border: none;
+            border-radius: 8px;
+        }
+        input { 
+            width: 70%; 
+            background: rgba(255,255,255,0.9);
+            color: #333;
+        }
+        button { 
+            background: #4CAF50; 
+            color: white; 
+            cursor: pointer;
+            font-weight: bold;
+        }
+        button:hover { background: #45a049; }
+        .response { 
+            background: rgba(255,255,255,0.2); 
+            padding: 15px; 
+            border-radius: 8px; 
+            margin: 15px 0;
+            border-left: 4px solid #4CAF50;
+        }
+        .status { 
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+        .ready { background: rgba(76, 175, 80, 0.3); }
+        .error { background: rgba(244, 67, 54, 0.3); }
+        .sources { 
+            background: rgba(255,255,255,0.1);
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 RAG System Test - Submission Ready!</h1>
+        <p><strong>Date:</strong> October 20, 2025 (Submission: Tomorrow!)</p>
+        
+        <div id="status" class="status">Checking system...</div>
+        
+        <div>
+            <h3>Test Your AI Assistant:</h3>
+            <input type="text" id="question" placeholder="Ask about the Sigma Web Development Course..." value="What is HTML?">
+            <button onclick="askQuestion()">Ask Question</button>
+        </div>
+        
+        <div id="response"></div>
+        
+        <div style="margin-top: 30px;">
+            <h3>✅ System Status Check:</h3>
+            <div id="healthCheck"></div>
+        </div>
+    </div>
+
+    <script>
+        const API_URL = 'http://localhost:5000';
+        
+        // Check system health on page load
+        fetch(API_URL + '/health')
+            .then(res => res.json())
+            .then(data => {
+                const statusDiv = document.getElementById('status');
+                const healthDiv = document.getElementById('healthCheck');
+                
+                if (data.embeddings_loaded && data.groq_api_configured) {
+                    statusDiv.innerHTML = '✅ System Ready for Submission!';
+                    statusDiv.className = 'status ready';
+                    
+                    healthDiv.innerHTML = `
+                        <p>✅ <strong>Embeddings:</strong> Loaded (${data.embeddings_loaded})</p>
+                        <p>✅ <strong>API:</strong> ${data.api_type}</p>
+                        <p>✅ <strong>Groq API:</strong> Configured (${data.groq_api_configured})</p>
+                        <p>🎉 <strong>Ready for submission tomorrow!</strong></p>
+                    `;
+                } else {
+                    statusDiv.innerHTML = '❌ System Not Ready';
+                    statusDiv.className = 'status error';
+                    healthDiv.innerHTML = JSON.stringify(data, null, 2);
+                }
+            })
+            .catch(err => {
+                document.getElementById('status').innerHTML = '❌ Cannot connect to backend';
+                document.getElementById('status').className = 'status error';
+                document.getElementById('healthCheck').innerHTML = 'Error: ' + err.message;
+            });
+        
+        function askQuestion() {
+            const question = document.getElementById('question').value;
+            const responseDiv = document.getElementById('response');
+            
+            if (!question.trim()) {
+                alert('Please enter a question!');
+                return;
+            }
+            
+            responseDiv.innerHTML = '<p>🤔 Thinking...</p>';
+            
+            fetch(API_URL + '/ask', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ question: question })
+            })
+            .then(res => res.json())
+            .then(data => {
+                if (data.error) {
+                    responseDiv.innerHTML = `<div class="response">❌ Error: ${data.error}</div>`;
+                } else {
+                    let sourcesHtml = '';
+                    if (data.sources && data.sources.length > 0) {
+                        sourcesHtml = '<div class="sources"><strong>📚 Sources:</strong><br>';
+                        data.sources.forEach(source => {
+                            sourcesHtml += `📺 Video ${source.number}: ${source.title} (${source.start}s - ${source.end}s)<br>`;
+                        });
+                        sourcesHtml += '</div>';
+                    }
+                    
+                    responseDiv.innerHTML = `
+                        <div class="response">
+                            <strong>🤖 AI Response:</strong><br>
+                            ${data.response.replace(/\n/g, '<br>')}
+                            ${sourcesHtml}
+                        </div>
+                    `;
+                }
+            })
+            .catch(err => {
+                responseDiv.innerHTML = `<div class="response">❌ Network Error: ${err.message}</div>`;
+            });
+        }
+        
+        // Allow Enter key to submit
+        document.getElementById('question').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                askQuestion();
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+HTTP/1.1 200 OK
+Server: Werkzeug/3.1.3 Python/3.13.7
+Date: Mon, 20 Oct 2025 08:35:32 GMT
+Content-Type: application/json
+Content-Length: 1032
+Access-Control-Allow-Origin: http://localhost:3000
+Vary: Origin
+Connection: close
+
+{"question":"What is HTML?","response":"Based on the course content, information about 'What is HTML?' can be found in the video timestamps listed below.\n\n---\n\n**\ud83d\udcda Learn More:**\n\n\ud83d\udcfa Video 2: Your First HTML Website \ud83d\udd52 21:21\n\n\ud83d\udcfa Video 1: Installing VS Code & How Websites Work \ud83d\udd52 8:10, 8:25\n\n\ud83d\udcfa Video 6: SEO and Core Web Vitals in HTML \ud83d\udd52 12:30\n\n\ud83d\udcfa Video 5: Image, Lists, and Tables in HTML \ud83d\udd52 10:57\n\n\n\ud83d\udca1 **These videos are from the Sigma Web Development Course on YouTube.**","sources":[{"end":1282.44,"number":"2","start":1281.44,"title":"Your First HTML Website"},{"end":491.9,"number":"1","start":490.9,"title":"Installing VS Code & How Websites Work"},{"end":751.0,"number":"6","start":750.0,"title":"SEO and Core Web Vitals in HTML"},{"end":506.9,"number":"1","start":505.9,"title":"Installing VS Code & How Websites Work"},{"end":658.4,"number":"5","start":657.64,"title":"Image, Lists, and Tables in HTML"}]}

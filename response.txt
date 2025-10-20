@@ -1,0 +1,10 @@
+The CSS box model is an essential concept in web development. The box model works by breaking down an HTML element into four main parts: the content area, padding, border, and margin. The content area is the actual space where the content is displayed, the padding is the space between the content and the border, the border is the visible outline of the element, and the margin is the space between the element and other elements. Understanding the box model is crucial for effective CSS styling.
+
+---
+
+**📚 Learn More:**
+
+📺 Video 18: CSS Box Model - Margin, Padding & Borders 🕒 1:49, 16:00, 1:42
+
+
+💡 **These videos are from the Sigma Web Development Course on YouTube.**

@@ -1,0 +1,37 @@
+# Ignore videos and large media files
+videos/
+audios/
+*.mp4
+*.webm
+*.mp3
+*.wav
+
+# Ignore development files
+frontend/
+node_modules/
+.git/
+.gitignore
+
+# Ignore documentation
+*.md
+docs/
+
+# Ignore test files
+test_*.py
+test_*.html
+
+# Ignore temporary files
+*.tmp
+*.log
+response.txt
+prompt.txt
+
+# Ignore IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Ignore OS files
+.DS_Store
+Thumbs.db
