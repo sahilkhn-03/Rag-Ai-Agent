@@ -154,7 +154,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 👨‍💻 Author
 
-**Sahil Khan** - *AI/ML Engineer & Full Stack Developer*
+**Sahil** - *AI/ML Engineer & Data Science Enthusiast*
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue)](https://linkedin.com/in/sahilkhan)
 [![GitHub](https://img.shields.io/badge/GitHub-Follow-blue)](https://github.com/sahilkhn-03)
