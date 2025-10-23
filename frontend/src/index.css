@@ -64,3 +64,24 @@
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
   @apply bg-primary-400;
 }
+
+/* Mobile-first responsive utilities */
+@layer utilities {
+  .safe-area-padding {
+    padding-left: max(1rem, env(safe-area-inset-left));
+    padding-right: max(1rem, env(safe-area-inset-right));
+  }
+  
+  .mobile-text-balance {
+    text-wrap: balance;
+  }
+  
+  .touch-action-manipulation {
+    touch-action: manipulation;
+  }
+  
+  /* Improved focus styles for accessibility */
+  .focus-visible-ring {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900;
+  }
+}

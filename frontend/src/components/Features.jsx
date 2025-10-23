@@ -43,13 +43,13 @@ const Features = () => {
   ]
 
   return (
-    <section id="features" ref={ref} className="py-12 bg-slate-950/50 relative">
+    <section id="features" ref={ref} className="py-16 lg:py-20 bg-slate-950/50 relative">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-10"
+          className="text-center mb-12 lg:mb-16"
         >
           <motion.div
             initial={{ scale: 0 }}
@@ -61,10 +61,10 @@ const Features = () => {
             <span className="text-sm font-medium text-primary-300">How It Works</span>
           </motion.div>
           
-          <h2 className="text-4xl md:text-5xl font-display font-bold mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-4 px-2 sm:px-0">
             <span className="text-gradient">RAG-Based AI</span> Technology
           </h2>
-          <p className="text-xl text-slate-400 max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-slate-400 max-w-3xl mx-auto px-4 sm:px-0">
             Revolutionary Retrieval-Augmented Generation system that understands your questions 
             and guides you to the exact learning content
           </p>
@@ -74,7 +74,7 @@ const Features = () => {
           {/* Connecting Lines */}
           <div className="hidden md:block absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-primary-500/30 to-transparent transform -translate-y-1/2" />
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
             {steps.map((step, index) => (
               <motion.div
                 key={index}
@@ -95,7 +95,7 @@ const Features = () => {
                 {/* Card */}
                 <motion.div
                   whileHover={{ scale: 1.05, y: -5 }}
-                  className="group bg-slate-900/80 backdrop-blur-sm border border-slate-800 hover:border-primary-500/50 rounded-2xl p-6 pt-10 h-full transition-all duration-300"
+                  className="group bg-slate-900/80 backdrop-blur-sm border border-slate-800 hover:border-primary-500/50 rounded-2xl p-4 sm:p-6 pt-8 sm:pt-10 h-full transition-all duration-300"
                 >
                   {/* Icon */}
                   <div className={`w-14 h-14 bg-gradient-to-br ${step.color} rounded-xl flex items-center justify-center mb-4 mx-auto shadow-lg group-hover:shadow-2xl transition-shadow`}>
@@ -103,12 +103,12 @@ const Features = () => {
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-xl font-bold mb-3 text-white text-center">
+                  <h3 className="text-lg sm:text-xl font-bold mb-3 text-white text-center">
                     {step.title}
                   </h3>
 
                   {/* Description */}
-                  <p className="text-slate-400 text-center leading-relaxed mb-4">
+                  <p className="text-sm sm:text-base text-slate-400 text-center leading-relaxed mb-4">
                     {step.description}
                   </p>
 

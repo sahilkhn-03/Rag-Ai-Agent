@@ -48,21 +48,21 @@ const Navbar = ({ activeSection }) => {
             whileHover={{ scale: 1.05 }}
             onClick={() => scrollToSection('home')}
           >
-            <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center">
-              <Bot className="w-6 h-6 text-white" />
+            <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-primary rounded-lg flex items-center justify-center">
+              <Bot className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
             </div>
-            <span className="font-display font-bold text-xl text-gradient">
+            <span className="font-display font-bold text-lg sm:text-xl text-gradient truncate">
               WebDev Assistant
             </span>
           </motion.div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-1">
+          <div className="hidden md:flex items-center space-x-2 lg:space-x-4">
             {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
+                className={`px-3 lg:px-4 py-2 rounded-lg font-medium transition-all duration-300 text-sm lg:text-base ${
                   activeSection === item.id
                     ? 'text-primary-400 bg-primary-500/10'
                     : 'text-slate-300 hover:text-white hover:bg-slate-800/50'
@@ -79,7 +79,7 @@ const Navbar = ({ activeSection }) => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => scrollToSection('ai-assistant')}
-              className="px-6 py-2.5 bg-gradient-primary rounded-full font-semibold text-white shadow-lg shadow-primary-500/50 hover:shadow-xl hover:shadow-primary-500/60 transition-all duration-300"
+              className="px-4 lg:px-6 py-2.5 bg-gradient-primary rounded-full font-semibold text-white shadow-lg shadow-primary-500/50 hover:shadow-xl hover:shadow-primary-500/60 transition-all duration-300 text-sm lg:text-base"
             >
               Try AI Assistant
             </motion.button>

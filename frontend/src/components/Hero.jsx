@@ -76,8 +76,8 @@ const Hero = () => {
       id="home" 
       className="relative flex items-center justify-center overflow-hidden"
       style={{
-        minHeight: 'calc(100svh - var(--nav-h))',
-        minHeight: 'calc(100vh - var(--nav-h))' // Fallback for browsers without svh support
+        minHeight: 'calc(100vh - var(--nav-h))',
+        paddingTop: 'var(--nav-h)' // Just navbar height, no extra padding
       }}
     >
       {/* Subtle Gradient Background Overlay */}
@@ -112,8 +112,8 @@ const Hero = () => {
         />
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full py-4 sm:py-6">
-        <div className="flex flex-col items-center text-center" style={{ gap: 'clamp(16px, 3vh, 24px)' }}>
+      <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 relative z-10 w-full py-4 sm:py-6 lg:py-8">
+        <div className="flex flex-col items-center text-center" style={{ gap: 'clamp(12px, 2.5vh, 24px)' }}>
           {/* Main Content */}
           <motion.div
             initial="hidden"
@@ -125,24 +125,27 @@ const Hero = () => {
             {/* Heading - Project Showcase with Fluid Typography */}
             <motion.h1
               variants={itemVariants}
-              className="font-black leading-tight tracking-tight text-white"
+              className="font-black leading-tight tracking-tight text-white px-2 sm:px-0 break-words"
               style={{
-                fontSize: 'clamp(24px, 5vw, 48px)',
-                maxWidth: '60ch',
-                margin: '0 auto'
+                fontSize: 'clamp(18px, 5vw, 48px)',
+                maxWidth: '95%',
+                margin: '0 auto',
+                lineHeight: 'clamp(1.15, 1.25, 1.35)',
+                wordSpacing: 'clamp(-0.5px, 0px, 2px)'
               }}
               data-variant="b-student-friendly"
             >
-              End-to-End RAG Pipeline for Educational Content
+              <span className="inline-block">End-to-End RAG Pipeline</span>{' '}
+              <span className="inline-block">for Educational Content</span>
             </motion.h1>
 
             {/* Description - Skills Showcase Subheadline with Fluid Typography */}
             <motion.p
               variants={itemVariants}
-              className="text-slate-300 leading-relaxed font-light"
+              className="text-slate-300 leading-relaxed font-light px-4 sm:px-0"
               style={{
-                fontSize: 'clamp(14px, 2.5vw, 20px)',
-                maxWidth: '60ch',
+                fontSize: 'clamp(14px, 3vw, 20px)',
+                maxWidth: '90%',
                 margin: '0 auto'
               }}
             >
@@ -152,7 +155,7 @@ const Hero = () => {
             {/* Primary CTA and YouTube Link Side by Side */}
             <motion.div
               variants={itemVariants}
-              className="flex flex-col sm:flex-row gap-3 justify-center items-center"
+              className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-stretch sm:items-center w-full max-w-lg sm:max-w-none mx-auto"
               style={{ marginTop: 'clamp(8px, 2vh, 16px)' }}
             >
               {/* Primary CTA - Start Learning Now */}
@@ -163,12 +166,12 @@ const Hero = () => {
                 data-variant="b-student-friendly"
                 data-cta="primary"
                 aria-label="Start learning web development now with AI assistance"
-                className="group px-6 sm:px-10 py-3 sm:py-4 bg-gradient-to-r from-sky-500 via-cyan-500 to-blue-500 hover:from-sky-400 hover:via-cyan-400 hover:to-blue-400 rounded-full font-bold text-white shadow-xl shadow-sky-500/30 hover:shadow-sky-400/50 transition-all duration-300 flex items-center justify-center gap-2 sm:gap-3 min-w-[200px] sm:min-w-[240px]"
-                style={{ fontSize: 'clamp(14px, 2vw, 18px)' }}
+                className="group px-6 sm:px-8 lg:px-10 py-3 sm:py-3.5 lg:py-4 bg-gradient-to-r from-sky-500 via-cyan-500 to-blue-500 hover:from-sky-400 hover:via-cyan-400 hover:to-blue-400 rounded-full font-bold text-white shadow-xl shadow-sky-500/30 hover:shadow-sky-400/50 transition-all duration-300 flex items-center justify-center gap-2 sm:gap-3 w-full sm:w-auto sm:min-w-[220px] lg:min-w-[240px]"
+                style={{ fontSize: 'clamp(14px, 2.2vw, 18px)' }}
               >
-                <Sparkles className="w-4 h-4 sm:w-5 sm:h-5" />
-                <span>Start Learning Now</span>
-                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
+                <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" />
+                <span className="whitespace-nowrap">Start Learning Now</span>
+                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform flex-shrink-0" />
               </motion.button>
 
               {/* YouTube Playlist Button */}
@@ -178,37 +181,42 @@ const Hero = () => {
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.03, y: -2 }}
                 aria-label="Watch the complete YouTube playlist"
-                className="inline-flex items-center gap-2 sm:gap-3 px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-br from-red-500/20 to-red-600/10 border-2 border-red-500/50 hover:border-red-400/70 rounded-full backdrop-blur-sm shadow-lg shadow-red-500/20 hover:shadow-red-500/40 transition-all duration-300 group min-w-[200px] sm:min-w-[240px] justify-center"
-                style={{ fontSize: 'clamp(14px, 2vw, 18px)' }}
+                className="inline-flex items-center gap-2 sm:gap-3 px-6 sm:px-8 lg:px-8 py-3 sm:py-3.5 lg:py-4 bg-gradient-to-br from-red-500/20 to-red-600/10 border-2 border-red-500/50 hover:border-red-400/70 rounded-full backdrop-blur-sm shadow-lg shadow-red-500/20 hover:shadow-red-500/40 transition-all duration-300 group w-full sm:w-auto sm:min-w-[220px] lg:min-w-[240px] justify-center"
+                style={{ fontSize: 'clamp(14px, 2.2vw, 18px)' }}
               >
-                <Youtube className="w-4 h-4 sm:w-5 sm:h-5 text-red-500 group-hover:scale-110 transition-transform" />
-                <span className="text-white font-bold">Watch Playlist</span>
+                <Youtube className="w-4 h-4 sm:w-5 sm:h-5 text-red-500 group-hover:scale-110 transition-transform flex-shrink-0" />
+                <span className="text-white font-bold whitespace-nowrap">Watch Playlist</span>
               </motion.a>
             </motion.div>
 
-            {/* Tech Icons Row - Responsive & Compact */}
+            {/* Tech Icons Row - Better Structure */}
             <motion.div
               variants={itemVariants}
-              className="flex flex-wrap items-center justify-center gap-2 sm:gap-4"
-              style={{ marginTop: 'clamp(8px, 1.5vh, 16px)' }}
+              className="w-full max-w-md mx-auto text-center"
+              style={{ marginTop: 'clamp(16px, 3vh, 24px)' }}
             >
-              {floatingTechs.map((tech, index) => (
-                <motion.div
-                  key={tech.name}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.8 + index * 0.1, duration: 0.5 }}
-                  whileHover={{ scale: 1.1, y: -4 }}
-                  className="group cursor-pointer"
-                >
-                  <div className={`relative bg-gradient-to-br ${tech.color} p-[1.5px] rounded-lg shadow-md hover:shadow-lg ${tech.shadow} transition-all duration-300`}>
-                    <div className="bg-slate-900/80 backdrop-blur-sm rounded-lg px-3 py-2 sm:px-4 sm:py-2.5 border border-white/5 group-hover:border-white/20 transition-all duration-300 flex items-center gap-1.5 sm:gap-2">
-                      <span className="text-base sm:text-xl">{tech.icon}</span>
-                      <span className="text-white font-semibold text-xs sm:text-sm">{tech.name}</span>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
+              <p className="text-slate-400 text-xs font-medium mb-2">Built with Modern Technologies</p>
+              <div className="grid grid-cols-4 gap-2">
+                {floatingTechs.map((tech, index) => (
+                    <motion.div
+                      key={tech.name}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 0.8 + index * 0.1, duration: 0.5 }}
+                      whileHover={{ scale: 1.05, y: -2 }}
+                      className="group cursor-pointer"
+                    >
+                      <div className={`relative bg-gradient-to-br ${tech.color} p-[1px] rounded-md shadow-sm hover:shadow-md ${tech.shadow} transition-all duration-300`}>
+                        <div className="bg-slate-900/90 backdrop-blur-sm rounded-md px-2 py-1.5 border border-white/10 group-hover:border-white/30 transition-all duration-300">
+                          <div className="flex items-center justify-center gap-1.5">
+                            <span className="text-sm">{tech.icon}</span>
+                            <span className="text-white font-medium text-xs text-center leading-tight">{tech.name}</span>
+                          </div>
+                        </div>
+                      </div>
+                    </motion.div>
+                ))}
+              </div>
             </motion.div>
 
             {/* Compact Stats - Hide on very small screens */}

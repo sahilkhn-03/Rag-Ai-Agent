@@ -52,7 +52,7 @@ const Contact = () => {
           >
             {[
               { label: 'AI Powered', value: '100%' },
-              { label: 'Response Time', value: '<5s' },
+              { label: 'Response Time', value: '<2s' },
               { label: 'Accuracy', value: '95%+' },
               { label: 'Available', value: '24/7' }
             ].map((stat, index) => (

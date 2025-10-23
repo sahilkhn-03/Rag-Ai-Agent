@@ -117,28 +117,29 @@ const About = () => {
   }
 
   return (
-    <section id="about" ref={ref} className="py-12 relative">
+    <section id="about" ref={ref} className="py-16 lg:py-20 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-10"
+          className="text-center mb-12 lg:mb-16"
         >
           <motion.div
             initial={{ scale: 0 }}
             animate={isInView ? { scale: 1 } : {}}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center space-x-2 bg-primary-500/10 border border-primary-500/30 rounded-full px-4 py-2 mb-4"
-          >
-            <Brain className="w-4 h-4 text-sky-400" />
-            <span className="text-sm font-medium text-sky-300">About the Course</span>
+            className="inline-flex items-center space-x-2 bg-primary-500/10 border border-primary-500/30 rounded-full px-4 py-2 mb-4">
+            <>
+              <Brain className="w-4 h-4 text-sky-400" />
+              <span className="text-sm font-medium text-sky-300">About the Course</span>
+            </>
           </motion.div>
           
-          <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-4 px-2 sm:px-0">
             <span className="text-gradient">RAG System Architecture</span> & Data Processing
           </h2>
-          <p className="text-lg text-slate-400 max-w-3xl mx-auto">
+          <p className="text-base md:text-lg text-slate-400 max-w-3xl mx-auto px-4 sm:px-0">
             A complete <span className="text-sky-400 font-semibold">Machine Learning pipeline</span> demonstrating 
             <span className="text-cyan-400 font-semibold"> RAG (Retrieval-Augmented Generation)</span>, 
             vector embeddings, and semantic search capabilities
@@ -149,8 +150,7 @@ const About = () => {
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
-          className="grid md:grid-cols-2 gap-4 max-w-4xl mx-auto"
-        >
+          className="grid sm:grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 max-w-5xl mx-auto">
           {features.map((feature, index) => (
             <motion.div
               key={index}

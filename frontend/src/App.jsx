@@ -38,15 +38,17 @@ function App() {
   }, [])
 
   return (
-    <div className="relative overflow-hidden">
+    <div className="relative min-h-screen overflow-x-hidden">
       <div className="bg-gradient-mesh fixed inset-0 -z-10" />
       
       <Navbar activeSection={activeSection} />
-      <Hero />
-      <About />
-      <Features />
-      <AIAssistant />
-      <Contact />
+      <main className="relative">
+        <Hero />
+        <About />
+        <Features />
+        <AIAssistant />
+        <Contact />
+      </main>
       <Footer />
     </div>
   )
