@@ -1,6 +1,4 @@
-# 🚀 RAG AI Agent - Intelligent Course Assistant
-
-[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen)](https://rag-ai-frontend-demo.vercel.app/)
+# 🚀 RAG AI Agent 
 An advanced **Retrieval-Augmented Generation (RAG)** AI system that transforms educational content into an interactive learning experience. This intelligent teaching assistant leverages state-of-the-art machine learning techniques to provide precise, context-aware answers with direct video references.
 
 🔗 **Live Demo**: [https://rag-ai-frontend-demo.vercel.app/](https://rag-ai-frontend-demo.vercel.app/)
@@ -156,7 +154,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Sahil** - *AI/ML Engineer & Data Science Enthusiast*
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue)](https://linkedin.com/in/sahilkhan)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue)](https://www.linkedin.com/in/sahil-%E3%85%A4-3552b3290/)
 [![GitHub](https://img.shields.io/badge/GitHub-Follow-blue)](https://github.com/sahilkhn-03)
 
 ---
