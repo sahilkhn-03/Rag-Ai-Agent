@@ -1,8 +1,6 @@
 # 🚀 RAG AI Agent 
 An advanced **Retrieval-Augmented Generation (RAG)** AI system that transforms educational content into an interactive learning experience. This intelligent teaching assistant leverages state-of-the-art machine learning techniques to provide precise, context-aware answers with direct video references.
 
-🔗 **Live Demo**: [https://rag-ai-frontend-demo.vercel.app/](https://rag-ai-frontend-demo.vercel.app/)
-
 ## 🎯 Key Features
 
 - 🤖 **AI-Powered Q&A**: Intelligent responses using Groq's Llama 3.1
