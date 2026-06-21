@@ -1,163 +1,59 @@
-# 🚀 RAG AI Agent 
+🚀 RAG AI Agent
+
 <p align="center">
-    <img src="demo.gif" width = "900">
-</p>
-An advanced **Retrieval-Augmented Generation (RAG)** AI system that transforms educational content into an interactive learning experience. This intelligent teaching assistant leverages state-of-the-art machine learning techniques to provide precise, context-aware answers with direct video references.
+  <img src="demo.gif" width="900">
+</p><p align="center">
+  Retrieval-Augmented Generation (RAG) system for querying educational video content with context-aware answers and timestamp references.
+</p>✨ Features
 
-## 🎯 Key Features
+- 🤖 Natural language question answering
+- 🔍 Semantic search over video transcripts
+- ⏱️ Timestamp-based content retrieval
+- 🎤 Whisper transcription pipeline
+- 🌐 Responsive web interface
 
-- 🤖 **AI-Powered Q&A**: Intelligent responses using Groq's Llama 3.1
-- 🎯 **Smart Content Retrieval**: Finds exact video timestamps using semantic search
-- 📊 **Data Science Pipeline**: End-to-end processing from video to vector embeddings
-- 🎨 **Modern UI/UX**: Responsive React frontend with Tailwind CSS and Framer Motion
-- ⚡ **Fast Performance**: Optimized for production deployment on Google Cloud Run
+🛠️ Tech Stack
 
-## 🧠 Data Science & AI/ML Pipeline
+AI / ML
 
-### 1. **Speech-to-Text Processing**
-- Converts educational videos to text using Whisper AI
-- Processes audio chunks with precise timestamp preservation
-- Handles large datasets efficiently with batch processing
+- Whisper
+- Sentence Transformers
+- Scikit-learn
 
-### 2. **Semantic Embedding Generation**
-- Transforms text chunks into dense vector representations
-- Uses lightweight transformer models for efficient embeddings
-- Stores embeddings in optimized format for fast retrieval
+Backend
 
-### 3. **Retrieval-Augmented Generation (RAG)**
-- Implements similarity search for semantic content matching
-- Retrieves most relevant content chunks based on user queries
-- Combines retrieved context with LLM for informed responses
+- Python
+- Flask
 
-### 4. **Machine Learning Architecture**
-- Vector similarity algorithms for content matching
-- Optimized search algorithms for fast retrieval
-- Integration with large language models for natural responses
+Frontend
 
-## 🛠️ Technology Stack
+- React
+- Tailwind CSS
+- Framer Motion
 
-### Data Science & ML
-- **NLP Processing**: sentence-transformers, scikit-learn
-- **Vector Search**: Cosine similarity with NumPy
-- **Data Management**: Pandas, Joblib
-- **API Integration**: Requests, Flask
+Deployment
 
-### Backend (Python/Flask)
-- **Framework**: Flask with CORS support
-- **Deployment**: Google Cloud Run optimized
-- **Environment Management**: python-dotenv
-- **Web Server**: Waitress for production
+- Google Cloud Run
+- Vercel
 
-### Frontend (React/Tailwind)
-- **Core**: React 18.3 with hooks
-- **Styling**: Tailwind CSS 3.4
-- **Animations**: Framer Motion
-- **Icons**: Lucide React
-- **Build Tool**: Vite
+🏗️ Architecture
 
-## 📊 System Architecture
+Video
+  ↓
+Whisper Transcription
+  ↓
+Embeddings
+  ↓
+Semantic Retrieval
+  ↓
+Llama 3.1
+  ↓
+Answer + Timestamp
 
-```mermaid
-graph TB
-    A[Video Content] --> B[Audio Extraction]
-    B --> C[Whisper AI Transcription]
-    C --> D[Text Chunking]
-    D --> E[Embedding Generation]
-    E --> F[Vector Database]
-    G[User Query] --> H[Query Embedding]
-    H --> I[Semantic Search]
-    I --> J[Context Retrieval]
-    J --> K[Llama 3.1 Generation]
-    K --> L[Formatted Response]
-    L --> M[Frontend Display]
-```
+👨‍💻 Author
 
-## 🔬 ML Pipeline Deep Dive
+Sahil Khan
 
-### Embedding Generation
-The system uses transformer models to create semantic embeddings that capture the meaning of text chunks for efficient similarity search.
+🔗 LinkedIn: https://www.linkedin.com/in/sahil-%E3%85%A4-3552b3290/
 
-### Similarity Search
-Advanced algorithms find the most relevant content by comparing vector representations of user queries with stored content embeddings.
-
-### Prompt Engineering
-Sophisticated prompt engineering optimizes large language model responses to provide accurate, context-aware answers.
-
-## 🎨 Frontend Features
-
-### Modern UI Components
-- **Responsive Design**: Mobile-first approach with Tailwind CSS
-- **Interactive Elements**: Animated buttons and cards with Framer Motion
-- **Real-time Chat**: Dynamic messaging interface with loading states
-- **Visual Feedback**: Status indicators and smooth transitions
-
-### Key Sections
-1. **Hero Section**: Compelling headline with animated tech cards
-2. **About Section**: Feature cards explaining system capabilities
-3. **AI Assistant**: Fully functional chat interface with example questions
-4. **Features Section**: Visual explanation of the RAG process
-
-## 🌐 API Endpoints
-
-### POST `/ask`
-Sends a question to the AI assistant and receives a contextual response with relevant video references.
-
-### GET `/health`
-System status check endpoint for monitoring deployment health.
-
-## 📈 Performance Metrics
-
-- **Response Time**: < 2 seconds for most queries
-- **Accuracy**: High relevance in top results
-- **Scalability**: Handles large video libraries efficiently
-- **Model Efficiency**: Lightweight embeddings for fast inference
-
-## 🎯 Use Cases
-
-- **Educational Institutions**: Enhance course materials with AI assistance
-- **Content Creators**: Transform video libraries into searchable knowledge bases
-- **Corporate Training**: Make training content more accessible and interactive
-- **Self-Learners**: Get instant answers to specific questions
-
-## 📁 Project Structure
-
-```
-RagBasedAi/
-├── app.py                 # Flask API server
-├── preprocess_json.py     # Embedding generation
-├── mp3_to_json.py        # Speech-to-text conversion
-├── video_to_mp3.py       # Video processing
-├── embeddings.joblib     # Vector database
-├── frontend/             # React application
-│   ├── src/
-│   │   ├── components/   # UI components
-│   │   ├── App.jsx       # Main application
-│   │   └── index.css     # Global styles
-└── requirements.txt      # Python dependencies
-```
-
-## 🔧 Deployment
-
-### Backend (Google Cloud Run)
-Containerized deployment with optimized resource allocation for cost-effective scaling.
-
-### Frontend (Vercel)
-- Automatic deployments from GitHub
-- Environment variables for API configuration
-- Optimized static asset delivery
-
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 👨‍💻 Author
-
-**Sahil** - *AI/ML Engineer & Data Science Enthusiast*
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue)](https://www.linkedin.com/in/sahil-%E3%85%A4-3552b3290/)
-[![GitHub](https://img.shields.io/badge/GitHub-Follow-blue)](https://github.com/sahilkhn-03)
-
----
-
-**Built with ❤️ using RAG AI Technology**
+💻 GitHub: https://github.com/sahilkhn-03
