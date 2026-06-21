@@ -36,19 +36,37 @@ Deployment
 - Google Cloud Run
 - Vercel
 
-🏗️ Architecture
+## 🏗️ Architecture
 
-Video
-  ↓
-Whisper Transcription
-  ↓
-Embeddings
-  ↓
-Semantic Retrieval
-  ↓
-Llama 3.1
-  ↓
-Answer + Timestamp
+```text
+┌─────────────┐
+│ Video Input │
+└──────┬──────┘
+       ↓
+┌─────────────┐
+│ Whisper STT │
+└──────┬──────┘
+       ↓
+┌─────────────┐
+│ Embeddings  │
+└──────┬──────┘
+       ↓
+┌─────────────┐
+│ Vector DB   │
+└──────┬──────┘
+       ↓
+┌─────────────┐
+│ Retrieval   │
+└──────┬──────┘
+       ↓
+┌─────────────┐
+│ Llama 3.1   │
+└──────┬──────┘
+       ↓
+┌─────────────┐
+│ Response +  │
+│ Timestamp   │
+└─────────────┘
 
 👨‍💻 Author
 
