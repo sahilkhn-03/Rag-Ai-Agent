@@ -70,7 +70,7 @@ Deployment
 
 👨‍💻 Author
 
-Sahil Khan
+Sahil
 
 🔗 LinkedIn: https://www.linkedin.com/in/sahil-%E3%85%A4-3552b3290/
 
