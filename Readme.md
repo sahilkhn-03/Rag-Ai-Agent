@@ -1,4 +1,7 @@
 # 🚀 RAG AI Agent 
+<p align="center">
+    <img src="demo.gif" width = "900">
+</p>
 An advanced **Retrieval-Augmented Generation (RAG)** AI system that transforms educational content into an interactive learning experience. This intelligent teaching assistant leverages state-of-the-art machine learning techniques to provide precise, context-aware answers with direct video references.
 
 ## 🎯 Key Features
